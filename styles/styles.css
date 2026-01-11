@@ -5,6 +5,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Réglages body en Arial regular (charte) : */
@@ -33,29 +34,19 @@ p{
     font-size: 1.5rem;
     line-height: 1.5em;
 }
+
 /* Réglages générales : */
 .section{
     padding: 100px 0;
 }
 
-.w40{
-    width: 40%;
-}
-
-.w60{
-    width: 60%;
-}
+.w40{ width: 40%; } /* Répétitif */
+.w60{ width: 60%; }
+.w25{ width: 25%; }
+.w32{ width: 32%; }
 
 .text-center{
     text-align: center;
-}
-
-.w25{
-    width: 25%;
-}
-
-.w32{
-    width: 32%;
 }
 
 .boxed{
@@ -71,7 +62,7 @@ p{
     flex-wrap: wrap;
 }
 
-/* Partie 2 : En-tête*/
+/* Partie 2 : En-tête */
 header{
     position: fixed;
     top: 0;
@@ -111,7 +102,6 @@ header{
     color: white;
     padding: 10px 20px;
     display: block;
-    box-sizing: border-box;
     transition: .2s ease;
 }
 
@@ -125,7 +115,7 @@ header{
     color: black;
 }
 
-/*Permet de séparé les boutons :*/
+/* Permet de séparé les boutons : */
 .space-between{
     justify-content: space-between;
 }
@@ -134,13 +124,8 @@ header{
     justify-content: center;
 }
 
-/* Pour version mobile : */
-.header-menu-mobile{
-    display: none;
-}
-
-/* Partie 3 : Images*/
-/*Arrière-plan du titre Aix Marseille Université : */
+/* Partie 3 : Images */
+/* Arrière-plan du titre Aix Marseille Université : */
 .slider{
     width: 100%;
     min-height: 80vh;
@@ -167,91 +152,15 @@ header{
 .slider-content p{
     color: #fff;
     font-size: 2rem;
-    font-weight: 300px;
 }
 
-.texte  {
-    font-size: 1.2rem;
-    line-height: 1.5em;
-}
-
-/*flex permet de centrer des éléments grosso modo : */
+/* flex permet de centrer des éléments grosso modo : */
 .flex{
     display: flex;
 }
 
-/*Permet de styliser des images (comme les images de prog en exemple) : */
-.skill{
-    background: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.skill img{
-    width: 100px;
-    height: 100px;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-}
-
-.skill h3{
-    color: #000;
-    margin-top: 10px;
-}
-
-
-/*En lien avec "skill", permet de faire des images interactives comme des boutons,
-mais c'est que du bonus ici : */
-.realisation{
-    height: auto;
-    aspect-ratio: 1/1;
-    position: relative;
-}
-
-.realisation h3{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    width: max-content;
-    opacity: 0;
-    transition: .4s ease;
-}
-
-.realisation a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: #fff;
-}
-
-.realisation img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(40%);
-    transition: .4s ease;
-}
-
-.realisation:hover img{
-    filter: brightness(60%);
-}
-
-.realisation:hover h3{
-    opacity: 1;
-}
-
-.gallery1 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Partie 4 : Bas de page (contact) : */
-/*Réglags Icones et autre : */
+/* Partie 4 : Bas de page (contact) */
+/* Réglags Icones et autre : */
 .icon{
     display: block;
     font-size: 40px !important;
@@ -274,60 +183,29 @@ mais c'est que du bonus ici : */
     border: 2px dashed #fff;
     border-radius: 15px;
     padding: 30px;
-    box-sizing: border-box;
 }
 
-.aligncenter{
-    align-items: center;
-}
-
-.active{
-    display: flex;
-}
-
-/*Partie 4 : mobile : */   
-
+/* =====================
+   RESPONSIVE MOBILE
+===================== */
 @media(max-width:810px){
 
+    /* En-tête */
     header{
-        height: 60px !important;
+        position: static;
     }
 
-    .header-menu-mobile{
-        display: block;
-        border: 0px;
-        background-color: #fff;
-        position: absolute;
-        left: 5%;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 991;
-    }
-
-    .header-logo{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9;
-    }
-
+    /* Menu responsive sans JS */
     .header-menu{
-        position: fixed;
-        top: O;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: #fff;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 30px;
-        display: none;
+        gap: 10px;
+        margin-top: 10px;
     }
 
-    .header-menu li:last-child a{
-        margin-top: 10px;
+    /* Titres */
+    h1{
+        font-size: 2rem;
     }
 
     h2{
@@ -335,43 +213,12 @@ mais c'est que du bonus ici : */
         margin-bottom: 30px;
     }
 
-    .slider{
-        height: 60vh;
-    }
-
-    .slider-content{
-        width: 90%;
-    }
-
-    .slider-content p{
-        margin-top: 20px;
-        font-size: 1.5rem;
-        text-wrap: balance;
-    }
-
-    h1{
-        font-size: 2rem;
-    }
-
+    /* Texte */
     p{
         font-size: 1rem;
-        text-wrap: balance;
     }
 
-    .toColumn{
-        flex-direction: column;
-    }
-
-    .mCenter{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .wm100{
-        width: 100% !important;
-    }
-
+    /* Mise en page */
     .section{
         padding: 50px 0;
     }
@@ -380,11 +227,9 @@ mais c'est que du bonus ici : */
         max-width: 90%;
     }
 
-    .wm47{
-        width: 47%;
-    }
-
-    .mgap20{
-        gap: 20px;
+    .w40,
+    .w60,
+    .w32{
+        width: 100%;
     }
 }
