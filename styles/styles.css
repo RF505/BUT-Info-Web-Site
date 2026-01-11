@@ -154,13 +154,13 @@ header{
     font-size: 2rem;
 }
 
-/* flex permet de centrer des éléments grosso modo : */
+/* flex permet de centrer des éléments : */
 .flex{
     display: flex;
 }
 
 /* Partie 4 : Bas de page (contact) */
-/* Réglags Icones et autre : */
+/* Réglages Icones et autre : */
 .icon{
     display: block;
     font-size: 40px !important;
