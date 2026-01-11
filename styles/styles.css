@@ -167,6 +167,11 @@ header{
     font-weight: 300px;
 }
 
+.texte  {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+}
+
 /*flex permet de centrer des éléments grosso modo : */
 .flex{
     display: flex;
@@ -275,6 +280,10 @@ mais c'est que du bonus ici : */
 
 .active{
     display: flex;
+}
+
+.t-underline{
+    text-decoration: underline;;
 }
 
 /*Partie 4 : mobile : */   
