@@ -1,28 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/*Partie 1 :  Textes */
+/* =====================
+   Partie 1 : Textes
+===================== */
 /* Réglages du texte : */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Réglages body en Arial regular (charte) : */
-body{
+body {
     font-family: Arial;
     font-weight: normal;
 }
 
 /* Réglages des titres h1 et h2 en Arial medium (charte) : */
-h1{
+h1 {
     color: #fff;
     font-size: 5rem;
     font-family: Arial;
     font-weight: 500;
 }
 
-h2{
+h2 {
     font-size: 3rem;
     margin-bottom: 100px;
     font-family: Arial;
@@ -30,56 +32,42 @@ h2{
 }
 
 /* Réglage taille du texte p :*/
-p{
+p {
     font-size: 1.5rem;
     line-height: 1.5em;
 }
 
 /* Réglages générales : */
-.section{
+.section {
     padding: 100px 0;
 }
 
-.w40{
-    width: 40%;
-}
+.w40 { width: 40%; }
+.w60 { width: 60%; }
+.w25 { width: 25%; }
+.w32 { width: 32%; }
 
-.w60{
-    width: 60%;
-}
-.w40{ width: 40%; } /* Répétitif */
-.w60{ width: 60%; }
-.w25{ width: 25%; }
-.w32{ width: 32%; }
-
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.w25{
-    width: 25%;
-}
-
-.w32{
-    width: 32%;
-}
-
-.boxed{
+.boxed {
     max-width: 1280px;
     margin-inline: auto;
 }
 
-.gap20{
+.gap20 {
     gap: 20px;
 }
 
-.wrap{
+.wrap {
     flex-wrap: wrap;
 }
 
-/* Partie 2 : En-tête*/
-/* Partie 2 : En-tête */
-header{
+/* =====================
+   Partie 2 : En-tête
+===================== */
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -90,68 +78,52 @@ header{
     box-shadow: 1px 1px 25px rgba(0,0,0,0.07);
 }
 
-/* Arrière plan bleu : */
-.backgroundBlue{
-    background: #1F63DE;
-    color: #fff;
-}
-
 /* Logo : */
-.header-logo{
+.header-logo {
     display: block;
 }
 
-.header-logo img{
+.header-logo img {
     width: 40%;
     background-color: white;
 }
 
-/* Boutons des menus en haut à droite : */
-.header-menu{
+/* Menu principal */
+.header-menu {
     display: flex;
     align-items: center;
     list-style: none;
+    gap: 10px;
 }
 
-.header-menu li a{
+.header-menu li a {
     text-decoration: none;
     color: white;
     padding: 10px 20px;
     display: block;
     box-sizing: border-box;
-    transition: .2s ease;
+    transition: 0.2s ease;
 }
 
-.header-menu li a:hover{
+.header-menu li a:hover {
     background-color: #f2f2f2;
 }
 
-/* couleur pour le bouton "Contact" */
-.header-menu li:last-child a{
+/* Bouton contact */
+.header-menu li:last-child a {
     background-color: white;
     color: black;
 }
 
-/*Permet de séparé les boutons :*/
-/* Permet de séparé les boutons : */
-.space-between{
-    justify-content: space-between;
-}
+/* Flex utilities */
+.space-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
 
-.justify-center{
-    justify-content: center;
-}
-
-/* Pour version mobile : */
-.header-menu-mobile{
-    display: none;
-}
-
-/* Partie 3 : Images*/
-/*Arrière-plan du titre Aix Marseille Université : */
-/* Partie 3 : Images */
-/* Arrière-plan du titre Aix Marseille Université : */
-.slider{
+/* =====================
+   Partie 3 : Images
+===================== */
+/* Slider arrière-plan */
+.slider {
     width: 100%;
     min-height: 80vh;
     aspect-ratio: 16/9;
@@ -159,14 +131,14 @@ header{
     position: relative;
 }
 
-.slider-background{
+.slider-background {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(30%);
 }
 
-.slider-content{
+.slider-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -174,53 +146,49 @@ header{
     text-align: center;
 }
 
-.slider-content p{
+.slider-content p {
     color: #fff;
     font-size: 2rem;
-    font-weight: 300px;
+    font-weight: 300;
 }
 
-.texte  {
+.texte {
     font-size: 1.2rem;
     line-height: 1.5em;
 }
 
-/*flex permet de centrer des éléments grosso modo : */
-/* flex permet de centrer des éléments grosso modo : */
-.flex{
-    display: flex;
-}
+/* Flex utils */
+.flex { display: flex; }
 
-/*Permet de styliser des images (comme les images de prog en exemple) : */
-.skill{
+/* Skills */
+.skill {
     background: #fff;
     border-radius: 15px;
     padding: 20px;
     box-sizing: border-box;
+    text-align: center;
 }
 
-.skill img{
+.skill img {
     width: 100px;
     height: 100px;
     aspect-ratio: 1/1;
     object-fit: contain;
 }
 
-.skill h3{
+.skill h3 {
     color: #000;
     margin-top: 10px;
 }
 
-
-/*En lien avec "skill", permet de faire des images interactives comme des boutons,
-mais c'est que du bonus ici : */
-.realisation{
+/* Réalisations interactives */
+.realisation {
     height: auto;
     aspect-ratio: 1/1;
     position: relative;
 }
 
-.realisation h3{
+.realisation h3 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -231,7 +199,7 @@ mais c'est que du bonus ici : */
     transition: .4s ease;
 }
 
-.realisation a{
+.realisation a {
     display: block;
     width: 100%;
     height: 100%;
@@ -239,7 +207,7 @@ mais c'est que du bonus ici : */
     color: #fff;
 }
 
-.realisation img{
+.realisation img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -247,30 +215,29 @@ mais c'est que du bonus ici : */
     transition: .4s ease;
 }
 
-.realisation:hover img{
+.realisation:hover img {
     filter: brightness(60%);
 }
 
-.realisation:hover h3{
+.realisation:hover h3 {
     opacity: 1;
 }
 
-.gallery1 img{
+.gallery1 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Partie 4 : Bas de page (contact) : */
-/*Réglags Icones et autre : */
-/* Partie 4 : Bas de page (contact) */
-/* Réglags Icones et autre : */
-.icon{
+/* =====================
+   Partie 4 : Bas de page (contact)
+===================== */
+.icon {
     display: block;
     font-size: 40px !important;
 }
 
-.label{
+.label {
     display: block;
     font-weight: 700;
     text-transform: uppercase;
@@ -278,145 +245,110 @@ mais c'est que du bonus ici : */
     font-size: 1.5rem;
 }
 
-.value{
+.value {
     display: block;
     font-size: 1.2rem;
 }
 
-.contact{
+.contact {
     border: 2px dashed #fff;
+    background-color: #1F63DE;
     border-radius: 15px;
     padding: 30px;
     box-sizing: border-box;
 }
 
-.aligncenter{
-    align-items: center;
-}
-
-.active{
-    display: flex;
-}
-
-/*Partie 4 : mobile : */   
+.aligncenter { align-items: center; }
 
 /* =====================
    RESPONSIVE MOBILE
 ===================== */
-@media(max-width:810px){
-
-    /* En-tête */
-    header{
-        height: 60px !important;
+@media(max-width:810px) {
+    /* Header */
+    header {
+        height: auto;
+        padding-block: 10px;
     }
 
-    .header-menu-mobile{
-        display: block;
-        border: 0px;
-        background-color: #fff;
-        position: absolute;
-        left: 5%;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 991;
+    .header-logo img {
+        width: 120px;
     }
 
-    .header-logo{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9;
-        position: static;
-    }
-
-    /* Menu responsive sans JS */
-    .header-menu{
-        position: fixed;
-        top: O;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: #fff;
-        flex-direction: column;
-        align-items: center;
+    /* Menu responsive simple */
+    .header-menu {
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 30px;
-        display: none;
-        gap: 10px;
-        margin-top: 10px;
+        gap: 8px;
     }
 
-    .header-menu li:last-child a{
-        margin-top: 10px;
+    .header-menu li a {
+        padding: 8px 12px;
+        font-size: 0.95rem;
     }
+
     /* Titres */
-    h1{
+    h1 {
         font-size: 2rem;
     }
 
-    h2{
+    h2 {
         font-size: 1.75rem;
         margin-bottom: 30px;
     }
 
-    .slider{
+    /* Slider */
+    .slider {
         height: 60vh;
     }
 
-    .slider-content{
+    .slider-content {
         width: 90%;
     }
 
-    .slider-content p{
+    .slider-content p {
         margin-top: 20px;
         font-size: 1.5rem;
         text-wrap: balance;
     }
 
-    h1{
-        font-size: 2rem;
-    }
-
     /* Texte */
-    p{
+    p {
         font-size: 1rem;
         text-wrap: balance;
     }
 
-    .toColumn{
+    /* Mise en page */
+    .toColumn {
         flex-direction: column;
     }
 
-    .mCenter{
+    .mCenter {
         justify-content: center;
         align-items: center;
         text-align: center;
     }
 
-    .wm100{
+    .wm100 {
         width: 100% !important;
     }
 
-    /* Mise en page */
-    .section{
+    .section {
         padding: 50px 0;
     }
 
-    .boxed{
+    .boxed {
         max-width: 90%;
     }
 
-    .wm47{
+    .wm47 {
         width: 47%;
     }
 
-    .mgap20{
+    .mgap20 {
         gap: 20px;
-    .w40,
-    .w60,
-    .w32{
+    }
+
+    .w40, .w60, .w32 {
         width: 100%;
     }
-}
 }
