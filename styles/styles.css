@@ -131,6 +131,10 @@ header{
     justify-content: space-between;
 }
 
+.justify-center{
+    justify-content: center;
+}
+
 /* Pour version mobile : */
 .header-menu-mobile{
     display: none;
@@ -280,10 +284,6 @@ mais c'est que du bonus ici : */
 
 .active{
     display: flex;
-}
-
-.t-underline{
-    text-decoration: underline;;
 }
 
 /*Partie 4 : mobile : */   
